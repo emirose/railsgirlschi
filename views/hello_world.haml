@@ -10,11 +10,12 @@
   rails generate controller HelloWorld
   HEREDOC
 = tutorial_for("plain", "Create a new Rails Project", code)
+%p Note for Cloud9 users: Create the project by clicking the button "Create a New Workspace" and calling it hello_world. Once it is loaded, click on "Start Editing" to start working on it.
 
 :ruby
   code = <<-HEREDOC
     HelloWorld::Application.routes.draw do
-      match '/hello_world' => 'hello_world#index'
+      get '/hello_world' => 'hello_world#index'
     end
   HEREDOC
 = tutorial_for("ruby", "Open <code>config/routes.rb</code>: Create a route to the index page", code, [2])
@@ -48,8 +49,9 @@
   rails server
   HEREDOC
 = tutorial_for("plain","Start the server", code)
+%p Note for Cloud9 users: Run <code>rails s -b $IP -p $PORT</code> instead
 
-= action_for("Visit <code>http://localhost:3000/hello_world</code>", "You should see Hello World")
+= action_for("<br/><br/><ul><li> Local env -> Visit <code>http://localhost:3000/hello_world</code></li><li> nitrous.io -> Visit <code>http://localhost:3000/hello_world</code></li><li>Could9 -> The terminal will tell you how to access your app. Add <code>/hello_world</code> at the end.</li></ul>", "You should see Hello World")
 
 :ruby
   code = <<-HEREDOC
