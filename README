@@ -1,0 +1,12 @@
+Hello and welcome to the RailsGirl tutorial web-app.
+
+It's a Sinatra app that is run using Rack.
+
+To run:
+
+Clone the repo
+rackup config.ru
+
+Point your browser to
+http://localhost:9292
+
