@@ -9,12 +9,12 @@
   ruby -v
   rails -v
   HEREDOC
-= tutorial_for("plain", "Check that ruby = 1.9.3 and rails = 3.2.15", code)
-.alert.alert-success Consider using http://nitrous.io if your ruby version is below 1.9.3, for rails version run "gem install rails --version=3.2.15".
+= tutorial_for("plain", "Check that ruby = 2.1.2 and rails = 4.2.1", code)
+.alert.alert-success Consider using http://nitrous.io if your ruby version is below 2.1.1, for rails version run "gem install rails --version=4.2.1".
 %h3 Feature 1.1 - View a list of their Events
 :ruby
   code = <<-HEREDOC
-  rails _3.2.15_ new event_tracker --skip-test-unit
+  rails _4.2.1_ new event_tracker --skip-test-unit
   cd event_tracker
   rails generate resource Event name:string description:string location:string
   rake db:migrate

@@ -9,13 +9,13 @@
    ruby -v
    rails -v
    HEREDOC
-= tutorial_for("plain", "Check that ruby = 1.9.3 and rails = 3.2.15", code)
-.alert.alert-success Consider using http://nitrous.io if your ruby version is below 1.9.3, for rails version run "gem install rails --version=3.2.15".
+= tutorial_for("plain", "Check that ruby = 2.1.2 and rails = 4.2.1", code)
+.alert.alert-success Consider using http://nitrous.io if your ruby version is below 2.1.2, for rails version run "gem install rails --version=4.2.1".
 
 %h3 Feature 1.1 - View a list of Questions
 :ruby
   code = <<-HEREDOC
-  rails _3.2.15_ new rg_answers --skip-test-unit
+  rails _4.2.1_ new rg_answers --skip-test-unit
   cd rg_answers
   rails generate resource Question name:string reason:string
   rake db:migrate
