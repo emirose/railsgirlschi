@@ -177,7 +177,7 @@
   class StepsController < ApplicationController
     def create
       @list = List.find(params[:list_id])
-      @step = @list.steps.new(params[:step])
+      @step = @list.steps.new(params.require(:step).permit(:description))
       if @step.save
         redirect_to list_url(@list)
       else
@@ -217,7 +217,7 @@
   class StepsController < ApplicationController
     def create
       @list = List.find(params[:list_id])
-      @step = @list.steps.new(params[:step])
+      @step = @list.steps.new(params.require(:step).permit(:description))
       if @step.save
         redirect_to list_url(@list)
       else

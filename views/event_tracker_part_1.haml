@@ -14,7 +14,7 @@
 %h3 Feature 1.1 - View a list of their Events
 :ruby
   code = <<-HEREDOC
-  rails _4.2.1_ new event_tracker --skip-test-unit
+  rails new event_tracker --skip-test-unit
   cd event_tracker
   rails generate resource Event name:string description:string location:string
   rake db:migrate

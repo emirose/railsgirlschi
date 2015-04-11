@@ -15,7 +15,7 @@
 %h3 Feature 1.1 - View a list of their Bucket Lists
 :ruby
   code = <<-HEREDOC
-  rails _3.2.15_ new bucket_list --skip-test-unit
+  rails new bucket_list --skip-test-unit
   cd bucket_list
   rails generate resource List name:string reason:string
   rake db:migrate
@@ -97,7 +97,7 @@
     end
 
     def create
-      @list = List.new(params[:list])
+      @list = List.new(params.require(:list).permit(:name, :reason))
       if @list.save
         redirect_to lists_url
       else
@@ -143,7 +143,7 @@
     end
 
     def create
-      @list = List.new(params[:list])
+      @list = List.new(params.require(:list).permit(:name, :reason)
       if @list.save
         redirect_to lists_url
       else
@@ -284,7 +284,7 @@
     end
 
     def create
-      @list = List.new(params[:list])
+      @list = List.new(params.require(:list).permit(:name, :reason))
       if @list.save
         redirect_to lists_url
       else

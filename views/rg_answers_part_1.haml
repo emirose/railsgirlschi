@@ -15,7 +15,7 @@
 %h3 Feature 1.1 - View a list of Questions
 :ruby
   code = <<-HEREDOC
-  rails _4.2.1_ new rg_answers --skip-test-unit
+  rails new rg_answers --skip-test-unit
   cd rg_answers
   rails generate resource Question name:string reason:string
   rake db:migrate
@@ -98,7 +98,7 @@
     end
 
     def create
-      @question = Question.new(params[:question])
+      @question = Question.new(params.require(:question).permit(:name, :reason))
       if @question.save
         redirect_to questions_url
       else
