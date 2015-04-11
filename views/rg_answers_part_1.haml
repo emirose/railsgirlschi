@@ -24,13 +24,6 @@
 = tutorial_for("plain", "Create a new Rails Project", code)
 .alert.alert-success Coaches, give quick explaination about what each command does.
 
-
-= action_for("Visit in your browser <code>http://localhost:3000</code>", "This is the default Rails landing page.  Let's try removing it and see what happens...")
-
-= action_for("Delete the file <code>public/index.html</code> and re-visit <code>http://localhost:3000</code>", "Now what do you see?")
-
-.alert.alert-success Coaches, explain why removing public created an error and how we are going to solve this by modifying rails routes.
-
 :ruby
   code = <<-HEREDOC
     RgAnswers::Application.routes.draw do
