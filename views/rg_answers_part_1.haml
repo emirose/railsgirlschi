@@ -26,7 +26,7 @@
 
 :ruby
   code = <<-HEREDOC
-    RgAnswers::Application.routes.draw do
+    Rails.application.routes.draw  do
 
       resources :questions
 
@@ -192,7 +192,7 @@
     <hr>
   <% end %>
   HEREDOC
-= tutorial_for("ruby","Open <code>app/views/questions/index.html.erb</code>, add a link to the Edit page for a Question inside the @questions.each block", code, [6])
+= tutorial_for("ruby","Open <code>app/views/questions/index.html.erb</code>, On the Index page add a link to the Edit page for a Question inside the @questions.each block", code, [6])
 
 = action_for("Visit <code>http://localhost:3000</code>", "Click on the Edit link for a Question.  You should be able to update your question.  If you can't, please ask your coach for some help.")
 
