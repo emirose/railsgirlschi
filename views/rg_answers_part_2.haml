@@ -292,7 +292,7 @@
 
     belongs_to :question
 
-    scope :by_votes, :order => "votes DESC"
+    scope :by_votes, -> {order(votes: :desc)}
   end
   HEREDOC
 = tutorial_for("ruby","Open <code>app/models/answer.rb</code>, add a named scope for sorting answers by votes", code, [5,6])
